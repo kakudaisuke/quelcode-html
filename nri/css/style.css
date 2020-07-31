@@ -18,7 +18,7 @@ body {
   top: 0; 
   z-index: 99;
   background-color: white;
-  padding: 8px 10px 0px 31px;
+  padding: 7px 12px 0px 31px;
 }
 header h1 a:before {
   content: "";
@@ -38,8 +38,7 @@ header ul {
   align-items: center;
 }
 header li {
-  font-size: 9px;
-  padding: 0 5px;
+  padding: 0 6px;
   text-align: center;
   height: var(--header-wrapper-height);
 }
@@ -57,7 +56,7 @@ header ul .menu:hover {
   border-bottom: solid 2px #0C419A;
 }
 header .fas {
-  margin-left: 30px;
+  margin-left: 28px;
   font-size: 20px;
 }
 header .fas:hover {
@@ -75,15 +74,10 @@ header .fas:hover {
   width: 100%;
   height: 250px;
   color: white;
-  /* overflow: hidden; これ要らない*/ 
   position: relative;
 }
 .page-title img {
   width: 100%;
-  /* object-position: 50% 50%; 効かない... */
-  /* vertical-align: baseline; 変化なし*/
-  /* vertical-align: middle; */
-  /* 全部効かない... */
   object-fit: cover; /* これならOK */
   height: 250px; /* これを設定しないと縦方向の位置調整できない */
 }
@@ -105,6 +99,7 @@ header .fas:hover {
 main {
   width: 795px;
   margin: 0 auto;
+  margin-bottom: 120px;
 }
 .share {
   display: flex;
@@ -149,7 +144,7 @@ main article h2:before {
 article p {
   color: rgb(92, 88, 88);
   line-height: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 article img {
   width: 100%;
@@ -202,6 +197,9 @@ article img {
   text-decoration: none;
   color: var(--a-color);
 }
+.page-navigation a:hover {
+  text-decoration: underline;
+}
 .next {
   float: right;
 }
@@ -211,6 +209,7 @@ article img {
   width: 100%;
   background-color: #DEECF8;
   padding: 25px 20px 10px;
+  margin-bottom: 70px;
 }
 .other-pages p {
   font-weight: bold;
@@ -221,23 +220,35 @@ article img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  vertical-align: middle;
 }
 .other-pages li {
-  height: 60px;
   width: 240px;
   background-color: white;
   border: rgb(201, 196, 196) 0.2px solid;
   margin-bottom: 18px;
-  /* display: table-cell; */
   text-align: center; 
   position: relative;
 } 
+.other-pages li:hover {
+  background-color: rgba(240, 240, 240, 0.8);
+  transition: 0.4s;
+}
+.upperbox {
+  height: 70px;
+}
+.upperbox a {
+  line-height: 70px;
+}
+.lowerbox {
+  height: 50px;
+}
+.lowerbox a {
+  line-height: 50px;
+}
 .other-pages a {
   color: var(--a-color);
   text-decoration: none;
   display: block;
-  line-height: 60px; /* 親divと合わせると隅々までリンクが効く */
   width: 240px; /* 親divと合わせると隅々までリンクが効く */
 }
 .other-pages a:before {
@@ -252,7 +263,6 @@ article img {
 /* <nav> 企業情報 */
 .company-info {
   width: var(--width-company-info);
-  /* height: 900px; */
   border-top: black 1.5px solid;
   margin: 0 auto;
 }
@@ -285,18 +295,20 @@ article img {
   font-size: 6px;
   color: gray;
   margin-right: 8px;
-  /* vertical-align: middle; 効かない*/
 }
 .nav-container li a {
   text-decoration: none;
   color: var(--a-color);
+}
+.nav-container li a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER  */
 .back-to-previous {
   width: var(--width-company-info);
   margin: 0 auto;
-  padding: 60px 0 80px 0;
+  padding: 60px 0 95px 0;
   font-size: 16px;
   border-top:  0.02px dotted rgb(107, 105, 105);
 }
@@ -304,13 +316,14 @@ article img {
   text-decoration: none;
   color: var(--a-color);
 }
+.back-to-previous a:hover {
+  text-decoration: underline;
+}
 .back-to-previous:before {
   content: "<   ";
   font-size: 6px;
   color: gray;
   margin-right: 8px;
-  /* vertical-align: middle; 効かない*/
-  /* .nav-container li:beforeに合わせる */
 }
 .follow-us {
   display: flex;
@@ -332,8 +345,7 @@ article img {
 
 /* サイトマップ */
 .site-map {
-  padding-top: 30px;
-  max-width: 1300px;
+  padding: 30px 7% 0 7%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
@@ -346,6 +358,10 @@ article img {
 .site-map a {
   text-decoration: none;
   color: inherit;
+}
+.site-map a:hover,
+.site-map h2:hover {
+  text-decoration: underline;
 }
 .site-map h2 {
   font-size: 16px;
@@ -375,9 +391,6 @@ article img {
   list-style: none;
   margin-bottom: 18px;
 }
-/* .footer-bottom li {
-  border-right: gray 0.7px solid;
-} */
 .footer-bottom ul li + li:before {
   content: "|";
   color: darkgray;
@@ -388,6 +401,9 @@ article img {
   color: #999999;
   font-size: 12px;
   font-weight: 300;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
 .footer-bottom p {
   font-size: 8px;
