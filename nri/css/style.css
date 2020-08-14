@@ -1,0 +1,411 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  --a-color: #0C419A; /*リンク文字色*/
+  color: rgb(65, 62, 62);
+  --header-wrapper-height: 60px; /* .header-wrapperの高さ揃える用 */
+  --width-company-info: 1000px; /* .company-infoの横幅揃える用 */
+}
+
+/* HEADER */
+.header-wrapper {
+  width: 100%;
+  height: var(--header-wrapper-height);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0; 
+  z-index: 99;
+  background-color: white;
+  padding: 7px 12px 0px 31px;
+}
+header h1 a:before {
+  content: "";
+  display: inline-block;
+  height: 42px;
+  width: 75px;
+  background-image: url(../images/logo.png);
+  background-size: contain;
+}
+header nav {
+  text-align: center;
+  vertical-align: middle;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header li {
+  padding: 0 6px;
+  text-align: center;
+  height: var(--header-wrapper-height);
+}
+header ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 40px; /* ロゴと縦中央合わせたい */
+  padding-bottom: 5px;
+}
+header ul .menu:hover {
+  color: #0C419A;
+  border-bottom: solid 2px #0C419A;
+}
+header .fas {
+  margin-left: 28px;
+  font-size: 20px;
+}
+header .fas:hover {
+  opacity: 0.6;
+}
+.pankuzu {
+  color: rgb(182, 178, 178);
+  font-size: 12px;
+  margin: 60px 0 25px 110px;
+}
+.pankuzu span:after {
+  content: " > ";
+}
+.page-title {
+  width: 100%;
+  height: 250px;
+  color: white;
+  position: relative;
+}
+.page-title img {
+  width: 100%;
+  object-fit: cover; /* これならOK */
+  height: 250px; /* これを設定しないと縦方向の位置調整できない */
+}
+.page-title p {
+  line-height: 3rem;
+  font-size: 20px;
+  position: absolute;
+  top: 12%;
+  left: 16%;
+}
+.page-title h2 {
+  font-size: 28px;
+  position: absolute;
+  top: 34%;
+  left: 16%;
+}
+
+/* MAIN */
+main {
+  width: 795px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+.share {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 35px 0;
+}
+.share p {
+  color: grey;
+  font-size: 12px;
+  font-weight: bold;
+}
+.fab {
+  margin-left: 22px;
+  font-size: 28px;
+}
+.fa-facebook-square {
+  color: #3B5998;
+}
+.fa-twitter-square {
+  color: #1DA1F2;
+}
+.fa-linkedin {
+  color: #0077B5;
+}
+/* ARTICLE */
+main article h2 {
+  font-size: 22px;
+  color: black;
+  margin-bottom: 30px;
+}
+main article h2:before {
+  content: "";
+  display: inline-block; /* inlineだと高さ幅調整できない*/
+  background-image: url(../images/listhead.png);
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+article p {
+  color: rgb(92, 88, 88);
+  line-height: 1.8rem;
+  margin-bottom: 30px;
+}
+article img {
+  width: 100%;
+}
+#pdf {
+  width: 300px;
+  height: 70px;
+  background-color: #005BAC;
+  color: white;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#pdf a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 300px; /* 親divと合わせると隅々までリンクが効く */
+  height: 70px; /* 親divと合わせると隅々までリンクが効く */
+  padding: 10px 10px;
+}
+#pdf a:before {
+  content: ">";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  font-size: 7px;
+  position: absolute;
+  top: 25px; /* #pdf - padding / 2 */
+  left: 10px;
+}
+#pdf a:after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/pdf.png);
+  height: 22px;
+  width: 22px;
+  background-size: contain;
+  margin-left: 8px;
+}
+#pdf:hover {
+  opacity: .85;
+  cursor: pointer;
+}
+.page-navigation {
+  margin: 30px 0;
+  text-decoration: none;
+}
+.page-navigation a {
+  text-decoration: none;
+  color: var(--a-color);
+}
+.page-navigation a:hover {
+  text-decoration: underline;
+}
+.next {
+  float: right;
+}
+/*NRIの強み*/
+.other-pages {
+  height: 240px;
+  width: 100%;
+  background-color: #DEECF8;
+  padding: 25px 20px 10px;
+  margin-bottom: 70px;
+}
+.other-pages p {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.other-pages ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.other-pages li {
+  width: 240px;
+  background-color: white;
+  border: rgb(201, 196, 196) 0.2px solid;
+  margin-bottom: 18px;
+  text-align: center; 
+  position: relative;
+} 
+.other-pages li:hover {
+  background-color: rgba(240, 240, 240, 0.8);
+  transition: 0.4s;
+}
+.upperbox {
+  height: 70px;
+}
+.upperbox a {
+  line-height: 70px;
+}
+.lowerbox {
+  height: 50px;
+}
+.lowerbox a {
+  line-height: 50px;
+}
+.other-pages a {
+  color: var(--a-color);
+  text-decoration: none;
+  display: block;
+  width: 240px; /* 親divと合わせると隅々までリンクが効く */
+}
+.other-pages a:before {
+    /* .other-pages a:beforeとテイスト合わせる */
+  content: ">";
+  position: absolute;
+  left: 3%;
+  color: gray;
+  font-size: 7px;
+}
+
+/* <nav> 企業情報 */
+.company-info {
+  width: var(--width-company-info);
+  border-top: black 1.5px solid;
+  margin: 0 auto;
+}
+.company-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 30px 0;
+}
+.nav-container {
+  border-top:  0.02px dotted rgb(107, 105, 105);
+  padding: 15px 0 15px 0;
+}
+.nav-container p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.nav-container ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 14px;
+}
+.nav-container li {
+  margin-bottom: 20px;
+  font-weight: 390;
+}
+.nav-container li:before {
+  content: ">";
+  font-size: 6px;
+  color: gray;
+  margin-right: 8px;
+}
+.nav-container li a {
+  text-decoration: none;
+  color: var(--a-color);
+}
+.nav-container li a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER  */
+.back-to-previous {
+  width: var(--width-company-info);
+  margin: 0 auto;
+  padding: 60px 0 95px 0;
+  font-size: 16px;
+  border-top:  0.02px dotted rgb(107, 105, 105);
+}
+.back-to-previous a {
+  text-decoration: none;
+  color: var(--a-color);
+}
+.back-to-previous a:hover {
+  text-decoration: underline;
+}
+.back-to-previous:before {
+  content: "<   ";
+  font-size: 6px;
+  color: gray;
+  margin-right: 8px;
+}
+.follow-us {
+  display: flex;
+  justify-content: center;
+  border-style: solid none solid none;
+  border-color: gray;
+  border-width: 1.5px;
+  padding: 30px 0;
+}
+.follow-us p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Helvetica Neue";
+}
+.follow-us i {
+  margin-left: 40px;
+  font-size: 32px;
+}
+
+/* サイトマップ */
+.site-map {
+  padding: 30px 7% 0 7%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  border-bottom: rgb(172, 170, 170) 0.8px solid;
+}
+.site-map ul {
+  list-style: none;
+  margin-bottom: 70px;
+}
+.site-map a {
+  text-decoration: none;
+  color: inherit;
+}
+.site-map a:hover,
+.site-map h2:hover {
+  text-decoration: underline;
+}
+.site-map h2 {
+  font-size: 16px;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+  color: #333333;
+}
+.site-map li {
+  font-size: 14px;
+  margin-top: 1rem;
+  color: rgb(94, 92, 92);
+}
+.site-map li::before {
+  content: ">";
+  font-size: 5px;
+  margin-right: 8px;
+}
+/* 免責事項など */
+.footer-bottom {
+  width: var(--width-company-info);
+  margin: 0 auto;
+  padding: 70px 0 110px;
+}
+.footer-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 18px;
+}
+.footer-bottom ul li + li:before {
+  content: "|";
+  color: darkgray;
+  margin-right: 1em;
+}
+.footer-bottom a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 12px;
+  font-weight: 300;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.footer-bottom p {
+  font-size: 8px;
+  color: rgb(65, 63, 63);
+}
